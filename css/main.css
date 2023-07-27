@@ -167,18 +167,22 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    height: calc(100vh - 158.4px);
     display: flex;
     align-items: center;
 
     padding-bottom: 32px;
 }
 
-.banner-wrapper {
+.banner-wrapper{
+    
+}
+
+.banner-item {
     background-image: url(../images/banner-image.png);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
     z-index: 1;
     border-radius: 8px;
     height: 420px;
@@ -186,7 +190,7 @@
 }
 
 
-.banner-wrapper::before {
+.banner-item::before {
     content: '';
     position: absolute;
     left: 0;
@@ -197,13 +201,13 @@
     border-radius: 8px;
 }
 
-.banner-inner {
+.banner-item-inner {
     padding: 92px 665px 92px 120px;
     z-index: 3;
     position: absolute;
 }
 
-.banner-inner h1 {
+.banner-item-inner h1 {
     font-weight: 700;
     font-size: 44px;
     line-height: 61px;
@@ -212,7 +216,7 @@
     z-index: 3;
 }
 
-.banner-inner p {
+.banner-item-inner p {
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
@@ -222,7 +226,7 @@
     margin-bottom: 40px;
 }
 
-.banner-inner-btn {
+.banner-item-inner-btn {
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
@@ -236,14 +240,14 @@
     z-index: 3;
 }
 
-.banner-inner-btn i {
+.banner-item-inner-btn i {
     color: #FFFFFF;
     margin-left: 8px;
     font-size: 13px;
     z-index: 3;
 }
 
-.banner-inner-icons {
+.banner-item-inner-icons {
     position: absolute;
     padding: 17px 22px;
     background-color: #FFFFFF;
@@ -254,15 +258,15 @@
     cursor: pointer;
 }
 
-#banner-inner-icons-1 {
+#banner-item-inner-icons-1 {
     margin-right: 70px;
 }
 
-.banner-inner-icons:last-child {
+.banner-item-inner-icons:last-child {
     margin-left: 16px;
 }
 
-.banner-inner-icons i {
+.banner-item-inner-icons i {
     color: #0F1542;
     font-size: 16px;
     position: relative;
@@ -275,8 +279,8 @@
 .banner-networks {
     display: flex;
     position: absolute;
-    right: -120px;
-    top: 49%;
+    top: 0;
+    right: -40px;
     gap: 24px;
     transform: rotate(-90deg);
 }
